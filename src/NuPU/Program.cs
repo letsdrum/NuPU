@@ -25,6 +25,7 @@ namespace NuPU
                 config.AddExample(new[] { "--package System.Text.Json" });
                 config.AddExample(new[] { "--includeprerelease false" });
                 config.AddExample(new[] { "-d c:\\myproject", "-r false", "-p System.Text.Json", "-i false" });
+                config.AddExample(new[] { "-d c:\\myproject", "-p System.Text.Json", "-i true", "-s master", "-t test-master", "-c \"Test commit\"", "--push" });
             });
             return await app.RunAsync(args);
         }
